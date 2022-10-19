@@ -1,0 +1,12 @@
+.contador{
+    width: fit-content;
+    background-color: aquamarine;
+    margin: auto;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.ImagCount{
+    width: 300px;
+}
