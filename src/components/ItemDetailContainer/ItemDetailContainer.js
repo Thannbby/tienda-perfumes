@@ -1,35 +1,25 @@
-// import { useState, useEffect} from "react";
-// import './ItemDetailContainer.css';
-// import {arregloProductos} from "../../basesDatos/baseDatos";
-// import { ItemDetail } from "../ItemDetail/ItemDetail";
-// import {useParams} from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import ItemDetail from "../ItemDetail/ItemDetail";
+import lavieestbellaregalo from '../../asests/productos/laviebella-regalo.jpg';
 
-// export const ItemDetailContainer= () => {
-//     const {id} = useParams (); 
-//     const [itemProduct, setItemProduct] = useState ({});
+const producto = [{id:1, title:"La Vie Est Belle", price:"$32.990", pictureUr1: lavieestbellaregalo, categoria:"Lacome"}]
 
-//     const promesa = new Promise ((resolve, reject) => {
-//         setTimeout ( ( ) => {
-//               resolve (arregloProductos);
-//    }, 2000);
-// })
+export const ItemDetailContainer = () => {
 
-// useEffect (()=>{
-//     const getProducto = async () =>{
-//         const productos = await promesa ();
-//         console.log ('producto', producto)
-//         const producto = productos.find (elemento => elemento.id === parseInt(id));
-//         console.log ("producto", producto)
-//         setItemProduct (producto)
-//     }
-// getProducto()
-// }, [id])
+const [data , setData] = useState ({})
+useEffect (() => {
+const getData = new Promise ( resolve => {
+setTimeout (() => {
+ resolve (producto);
+}, 2000);
+});
+getData.then(res => setData(res));
+}, [])
 
-// console.log('item', item)
-// return(
-//     <div className="item-detail-container">
-//         <p style={{width:"100%", color: "beige"}}>Item detail container</p>
-//        <ItemDetail item = {itemProduct}/>
-//     </div>
-// )
-// }
+return (
+ <ItemDetail data = {data} />
+);
+}
+
+export default ItemDetailContainer;
+

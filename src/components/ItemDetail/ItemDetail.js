@@ -1,16 +1,19 @@
-// import './ItemDetail.css'
+import React from 'react';
+import './ItemDetail.css';
 
-// export const ItemDetail = ({item}) =>{
-//     return(
-//         <div className='detail-container'>
-//             <p style={{width:"100%"}}>item detail</p>
-//             <div className='img-container'>
-//                 <img src= {item.pictureUr1} alt={item.title}/>
-//             </div>
-//             <div className='img-container'>
-//                 <h4>{item.title}</h4>
-//                 <h5>${item.price}</h5>
-//             </div>
-//         </div>
-//     )
-// }
+export const ItemDetail = ({data}) => {
+return (
+<div className="container"> 
+< div className="detail" >
+< img className='detail_image'  src={ data.pictureUr1} alt={data.tittle}/>
+<div className= "content" > 
+<h4>{data.tittle} </h4>
+<h5>{data.price}</h5>
+</ div>
+</div >
+ </div >
+);
+}
+
+export default ItemDetail;
+
