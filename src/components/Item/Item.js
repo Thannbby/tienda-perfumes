@@ -1,20 +1,7 @@
 import './Item.css';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-
-
-//  export const Item = ({info}) =>{
-//      return(
-//   <div className='film'>
-//   <div >
-//     <img src={info.pictureUr1} alt={info.title}/>
-//     <h4>{info.title}</h4>
-//     <h5>{info.price}</h5>
-//   </div>
-//    </div>
-//  )
-//  }
-
+import { Link } from 'react-router-dom';
 
 
 export const Item = ({info}) => {
@@ -26,7 +13,9 @@ export const Item = ({info}) => {
             <Card.Text>
             {info.price}
             </Card.Text>
-            <Button variant="primary">Comprar</Button>
+            <Link to={`/item/${info.id}`}>
+                  <Button variant="primary">Ver Detalle</Button>
+            </Link>
           </Card.Body>
         </Card>
     );

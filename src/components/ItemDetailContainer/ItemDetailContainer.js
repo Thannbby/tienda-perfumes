@@ -1,25 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import ItemDetail from "../ItemDetail/ItemDetail";
-import lavieestbellaregalo from '../../asests/productos/laviebella-regalo.jpg';
+import {ItemDetail} from "../ItemDetail/ItemDetail";
+import { useParams } from "react-router-dom";
+import {productos} from "../BaseDatos/BaseDatos";
 
-const producto = [{id:1, title:"La Vie Est Belle", price:"$32.990", pictureUr1: lavieestbellaregalo, categoria:"Lacome"}]
 
 export const ItemDetailContainer = () => {
 
+const {id}=useParams();
+
 const [data , setData] = useState ({})
+
 useEffect (() => {
-const getData = new Promise ( resolve => {
-setTimeout (() => {
- resolve (producto);
-}, 2000);
-});
-getData.then(res => setData(res));
-}, [])
+        const dataFiltered = productos.filter((elem) => elem.id === Number(id))
+        setData(dataFiltered[0]);
+},[id]);
 
 return (
- <ItemDetail data = {data} />
+ <ItemDetail data={data}/>
 );
 }
 
 export default ItemDetailContainer;
-
