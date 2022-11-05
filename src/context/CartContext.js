@@ -44,12 +44,16 @@ export const CartProvider = ({children}) => {
         const totalProdutos = productosCarrito.reduce((acc,curr)=> acc + curr.quantity, 0);
         return totalProdutos;
     }
- 
+
+    const removeItem = (id)=>{
+      const newProducts = productosCarrito.filter((elemento)=>elemento.id !== id);
+      setProductosCarrito(newProducts);
+    }
+
 
   return(
-    <CartContext.Provider value= {{productosCarrito, addProducts, getTotalPrice, getTotalProdutos}}>
+    <CartContext.Provider value= {{productosCarrito, addProducts, getTotalPrice, getTotalProdutos, removeItem}}>
       {children}
     </CartContext.Provider>
   )
 }
-//horla
