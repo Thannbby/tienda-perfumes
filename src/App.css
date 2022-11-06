@@ -13,8 +13,16 @@
 }
 
 .claseActiva{
-  color: rgb(243, 59, 145);
+  color: rgb(156, 44, 10);
 }
 .claseInactiva{
-  color: aliceblue;
+  color: rgb(243, 59, 145);
+}
+
+.footer{
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(182, 174, 174);
+  color: black;
+  font-size: 1.5rem;
 }

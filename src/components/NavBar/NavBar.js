@@ -8,11 +8,11 @@ export const NavBar = ()=> {
         <nav className='menunav'>
             <img className='logo' src={ImagenLogo} alt='logo'/>
             <ul className="list">
-                <NavLink className={({isActive}) =>isActive === true ?'claseActiva' : 'claseInactiva'}to="/">Inicio</NavLink>
-                <NavLink className={({isActive}) =>isActive === true ?'claseActiva' : 'claseInactiva'} to="/category/mujer">Pefumes para Mujer</NavLink>
-                <NavLink className={({isActive}) =>isActive === true ?'claseActiva' : 'claseInactiva'} to="/category/hombre" >Pefumes para Hombre</NavLink>   
-                <NavLink className={({isActive}) =>isActive === true ?'claseActiva' : 'claseInactiva'} to="/category/regalo">Regalos</NavLink>
-                <NavLink className={({isActive}) =>isActive === true ?'claseActiva' : 'claseInactiva'} to="/contacto">Contacto</NavLink>
+                <div><NavLink className={({isActive}) =>isActive === true ?'claseActiva' : 'claseInactiva'}to="/">Inicio</NavLink></div>
+                <div><NavLink className={({isActive}) =>isActive === true ?'claseActiva' : 'claseInactiva'} to="/category/mujer">Pefumes para Mujer</NavLink></div>
+                <div><NavLink className={({isActive}) =>isActive === true ?'claseActiva' : 'claseInactiva'} to="/category/hombre" >Pefumes para Hombre</NavLink>   </div>
+                <div><NavLink className={({isActive}) =>isActive === true ?'claseActiva' : 'claseInactiva'} to="/category/regalo">Regalos</NavLink></div>
+                <div><NavLink className={({isActive}) =>isActive === true ?'claseActiva' : 'claseInactiva'} to="/contacto">Contacto</NavLink></div>
             </ul>
             <Link to="/cart">
                 <CartWidget/>

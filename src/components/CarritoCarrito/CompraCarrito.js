@@ -1,7 +1,9 @@
+import './CompraCarrito.css'
 import { useContext } from "react"
 import { CartContext } from "../../context/CartContext";
 import { baseDatos } from "../../utils/firebase";
 import { collection, addDoc, doc, updateDoc} from "firebase/firestore";
+import Form from 'react-bootstrap/Form';
 
 export const CompraCarrito = ()=>{
 
@@ -26,14 +28,14 @@ export const CompraCarrito = ()=>{
     }
 
     const actualizar = ()=>{
-      const queryRef = doc (baseDatos, "items", "91o2oGVQ4UAEAceacAoM");
-      updateDoc(queryRef,{price:120}).then(()=>console.log("bien").catch((error)=>console.log("error")))
+      const queryRef = doc (baseDatos, "items", "Mb2U74FLFh2NTeQ0IpHB");
+      updateDoc(queryRef,{price:120}).then(()=>console.log("bien")).catch((error)=>console.log("error"))
     } 
 
     return(
-      <div>
-         <p>Carrito</p>
-         <div style={{width:"500px", border:"1px solid pink"}}>
+      <div className='contenedorcarrito' >
+         <p>Productos seleccionados</p>
+         <div className='contenedor-producto' style={{width:"500px", border:"1px solid pink"}}>
             {
               productosCarrito.map((producto)=>(
                 <div>
@@ -46,7 +48,8 @@ export const CompraCarrito = ()=>{
               ))
             }
             <p> <strong> Precio Total: </strong> {getTotalPrice()} </p>
-            <form onSubmit={enviarPedido} >
+         </div>
+         <form onSubmit={enviarPedido} className='contenedor-form' >
                <label>Nombre</label>
                <input type="text" placeholder="Nombre"/>
                <label>Teléfono</label>
@@ -55,8 +58,7 @@ export const CompraCarrito = ()=>{
                <input type="email" placeholder="Ingrese su correo" />
                <button type="submit" >Enviar Pedido</button>
             </form>
-         </div>
-         <button onClick={actualizar}>Actualizar Producto</button>
+         {/* <button onClick={actualizar}>Actualizar Producto</button> */}
       </div>
     )
   

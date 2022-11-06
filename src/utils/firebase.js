@@ -5,12 +5,12 @@ import {getFirestore} from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyDya2SCkTJ2iS7LkuVBd_PTI0xz_1PhJcI",
-  authDomain: "tienda-perfumes.firebaseapp.com",
-  projectId: "tienda-perfumes",
-  storageBucket: "tienda-perfumes.appspot.com",
-  messagingSenderId: "34009758174",
-  appId: "1:34009758174:web:b2650fb69836665c6fc54f"
+  apiKey: "AIzaSyAlUl0pRmdyU2m797GXX_qaHwSRmRf6YqI",
+  authDomain: "tienda-perfumes-20254.firebaseapp.com",
+  projectId: "tienda-perfumes-20254",
+  storageBucket: "tienda-perfumes-20254.appspot.com",
+  messagingSenderId: "247910374329",
+  appId: "1:247910374329:web:6405fe08d1c239542bf468"
 };
 
 // Initialize Firebase

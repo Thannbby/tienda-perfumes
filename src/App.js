@@ -2,12 +2,12 @@
 
 import './App.css';
 import {NavBar} from "./components/NavBar/NavBar.js";
-import {ItemListContainer} from "./components/ItemListContainer/ItemListContainer.js";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import {ItemDetailContainer} from "./components/ItemDetailContainer/ItemDetailContainer.js"
 import {ContactoPage} from './components/ContactoPage/ContactoPage';
 import {CompraCarrito} from "./components/CarritoCarrito/CompraCarrito";
 import { CartProvider } from './context/CartContext';
+import {ItemListContainer} from "./components/ItemListContainer/ItemListContainer.js"
 
 function App() {
   return (
@@ -21,7 +21,6 @@ function App() {
         <Route path="/contacto" element={<ContactoPage/>}/>
         <Route path="/item/:id" element={<ItemDetailContainer/>}/>
         <Route path ="/cart" element={<CompraCarrito/>}/>
-        {/* <Route path="/perfume/:categoryId" element ={<ItemDetailContainer/>}/> */}
       </Routes>
       <footer className='footer'>Derechos reservados</footer>
     </div>

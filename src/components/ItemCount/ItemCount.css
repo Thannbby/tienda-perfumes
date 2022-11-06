@@ -1,12 +1,21 @@
 .contador{
     width: fit-content;
-    background-color: rgb(229, 233, 231);
+
     margin: auto;
-    padding: 1rem;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
+    padding: 4rem;
 }
-.ImagCount{
-    width: 300px;
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(206, 197, 209);
+    margin: 10px;
+    padding: 10;
+}
+
+.botoncontrol{
+
+}
+
+.botonAgregar{
+
 }

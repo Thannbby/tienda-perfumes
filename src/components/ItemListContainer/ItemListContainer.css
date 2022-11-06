@@ -1,14 +1,12 @@
 .contenedor{
-    background-color: rgb(116, 108, 116);
+    background-color: rgb(241, 232, 241);
     margin: 0; padding: 0;
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
 .carDs{
 width: 100%;
-padding: 10px; margin: 0;
-background-color: rgb(243, 243, 243);
-display: flex;
-flex-direction: row;
-justify-content: space-around;
+padding: 10px; margin: 5px;
+background-color: rgb(233, 226, 235);
 }

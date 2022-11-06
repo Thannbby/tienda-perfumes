@@ -3,6 +3,7 @@ import './ItemDetail.css';
 import {ItemCount} from "../ItemCount/ItemCount";
 import { useContext } from 'react';
 import {CartContext} from "../../context/CartContext";
+import { text } from '@fortawesome/fontawesome-svg-core';
 
 export const ItemDetail = ({item})=> {
 
@@ -14,7 +15,7 @@ export const ItemDetail = ({item})=> {
   
     return (
       <div className='detail-container'>
-           <p style = {{width: "100%"}}> item detail </p>
+           <p className='parrafo'>Detalle del Producto</p>
            <div>
                 <img src={item.pictureUr1} alt={item.title}/>
            </div>
@@ -22,7 +23,10 @@ export const ItemDetail = ({item})=> {
                 <h4>{item.title}</h4>
                 <h5>{item.price}</h5>
            </div>
+           <div>
            <ItemCount stock={10} initial={1} onAdd={addProduct}/>
+           </div>
+           
       </div>
     )
     
